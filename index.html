@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login Page</title>
+</head>
+<body>
+
+<div class="container" id="main">
+    <div class="signUp">
+        <form action="#">
+            <h1>Create Account</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" required>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </div>
+    <div class="Login">
+        <form action="#">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="forgot">
+               <a href="#">Forgot Password?</a>
+            </div>
+            
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+
+    <div class="overlay-box">
+        <div class="overlay">
+            <div class="overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                 <button id="LogIn">Login</button>
+            </div>
+            <div class="overlay-right">
+                <h1>Hello!</h1>
+                <p>Enter your details and start your journey with us</p>
+                 <button id="SignUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+const signUpButton=document.getElementById('SignUp');
+const LoginButton=document.getElementById('LogIn');
+const main=document.getElementById('main');
+
+signUpButton.addEventListener('click',() =>{
+    main.classList.add("right-panel-active");
+});
+
+LoginButton.addEventListener('click',() =>{
+    main.classList.remove("right-panel-active");
+});
+</script>
+</body>
+</html>
